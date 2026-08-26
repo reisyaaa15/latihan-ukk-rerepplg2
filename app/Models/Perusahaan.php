@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Siswa;
 
 class Perusahaan extends Model
 {
@@ -16,8 +17,9 @@ class Perusahaan extends Model
         'nama_pembimbing_industri',
         'telepon',
     ];
+
     public function siswa()
-{
- return $this->hasMany(Siswa::class);
-}
+    {
+        return $this->hasMany(Siswa::class);
+    }
 }
